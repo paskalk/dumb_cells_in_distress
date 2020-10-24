@@ -33,6 +33,8 @@ class IntegerOperations {
         this._store = [];
         this._product = 1;
         this._zeroCheck = false;
+        this._zeroCheckStack = [];
+        this._valStoreStack= [];
     }
 
     insert(val){
@@ -44,25 +46,66 @@ class IntegerOperations {
             let lastVal = this._store[this._store.length - this._k - 1];
                 
             if (lastVal === 0){
-                this._zeroCheck = true;
+                if (this._valStoreStack.length){
+                    console.log('here');
+                    // this.product = lastVal;
+                    console.log(this._valStoreStack);
+                    this._zeroCheckStack.pop();
+                    this.product = this._valStoreStack.pop();
+                }
                 lastVal = 1;
+            } 
+
+            if (val === 0){
+                this._zeroCheckStack.push(0);
             } else {
+                if (this._zeroCheckStack.length){
+                    this._valStoreStack.push(val);
+
+                    lastVal = 1;
+                }  
                 // console.log('here');
                 // console.log(this._zeroCheck);
-                if (this._zeroCheck){
-                    this._zeroCheck = false;
-                    lastVal = 1;
-                }        
+                
             }
             
             
-        this._product = this._product / lastVal * val;//
+            this._product = this._product / lastVal * val;//
         } else {
             this._product *= val;
         }
         console.log('prod: ',this._product);
         
     }
+
+    // insert(val){
+        
+    //     this._store.push(val);
+    //     console.log(this._zeroCheck);
+    //     console.log('curr: ', val,'lastVal: ', this._store[this._store.length - this._k - 1]);
+    //     if (this._store.length > this._k){
+    //         let lastVal = this._store[this._store.length - this._k - 1];
+                
+    //         if (lastVal === 0){
+    //             this._zeroCheck = true;
+    //             lastVal = 1;
+    //         } else {
+    //             // console.log('here');
+    //             // console.log(this._zeroCheck);
+    //             if (this._zeroCheck){
+    //                 this._zeroCheck = false;
+    //                 lastVal = 1;
+    //             }        
+    //         }
+            
+            
+    //     this._product = this._product / lastVal * val;//
+    //     } else {
+    //         this._product *= val;
+    //     }
+    //     console.log('prod: ',this._product);
+        
+    // }
 
     get(){
         return this._product;
@@ -79,3 +122,4 @@ prod.insert(4);
 prod.insert(3);
 
 console.log(prod.get());
+
