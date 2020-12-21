@@ -75,6 +75,8 @@ Provided examples----------
 
 "2"
 
+{'chicken', 'cow'}
+"cow"
 
 
 */
