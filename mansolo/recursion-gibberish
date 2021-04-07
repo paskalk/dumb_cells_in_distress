@@ -1,0 +1,35 @@
+Hello bro.How are you doing today hope fine.Please I had this problem in the algorithm reexam and was unable to solve it and i have a complementary session for the exam on monday.Can you help me provide a solution for this_I would really appreciate.Thanks
+   Consider the following recursive function f(x,y) with two positive integers x and y:
+S(x) = x + 1;
+f(x,0) = 0;
+f(x,S(y)) = g(f(x,y), x);
+g(x,0) = x;
+g(x,S(y)) = S(g(x,y));
+Your task is to:
+- calculate the values of f(5, 4) and f(4, 3);
+- find out what the function f(x,y) does;
+- calculate big Oh for large N
+Provide detailed steps to solve the problem, i.e. detailed calculations of recursion, the
+reasoning of the result, method for calculating big Oh.
+No points will be given to answers without detailed steps.
+
+function s(x) {
+  return x + 1;
+}
+
+function f(x, m) {
+  if (m == 0) return 0;
+  
+  // m = S(y)
+}
+
+function fOfN(x, y) {
+  n = S(y);  
+  f(x, n)
+}
+
+function g(x, n) {
+  if (n == 0) return x;
+  
+  // n = s(y) = s(g(x, y))
+}
