@@ -3,9 +3,11 @@ Think of possible solutions (min 5 - min 10)
     -> consider pros and cons discuss with interviewer (aka tradeoffs)
 
 Write code min 10 - 20 min
+    -> Use meaningful names (variables & functions)
+    -> Simplify some things you can
 
 Try going through an example (Catch edge cases) - 5 min
-    
+
 Complexity (2 - 5) min
     -> Runtime 
     -> Memory

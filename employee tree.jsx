@@ -44,3 +44,8 @@ function getWeight(empl) { //
       return count;
     
   }
+
+
+  function getWeightTwo(empl){
+    
+  }

@@ -90,7 +90,7 @@ node5.addRandom(node1);
 node2.addRandom(node3);
 
 
-// console.log(node1===deepCopy(node1));
+//console.log(node1===deepCopy(node1));
 console.dir(deepCopy(node1));
 // console.dir(reverseLinkedList(node1));
 
